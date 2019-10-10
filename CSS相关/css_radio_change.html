@@ -127,6 +127,38 @@
           .color-container li:nth-child(7n + 7) .color-item {
             background: #e6e6e6;
           }
+
+          .tags-select {
+              font-size: 0;
+            }
+            .tags-select > .tag-select {
+              display: inline-block;
+              font-size: 14px;
+              margin: 5px;
+              position: relative;
+              font-weight: normal;
+            }
+            .tags-select > .tag-select .name {
+              display: block;
+              line-height: 20px;
+              padding: 8px 10px;
+              border: 1px solid #ccc;
+              cursor: pointer;
+            }
+            .tags-select > .tag-select input[type="radio"],.tags-select > .tag-select input[type="checkbox"] {
+              position: absolute;
+              opacity: 0;
+              z-index: -1;
+            }
+            .tags-select > .tag-select input[type="radio"]:checked + .name,.tags-select > .tag-select input[type="checkbox"]:checked + .name {
+              border-color: #e3393c;
+            }
+            .tags-select > .tag-select input[type="radio"]:disabled + .name {
+              background: #eee;
+              color: #999;
+              cursor: not-allowed;
+            }
+            p.label-info{float:left;line-height: 32px;margin-top:10px;font-weight: bold;margin-right:10px;}
     </style>
 </head>
 
@@ -155,7 +187,7 @@
             <label for="testTabRadio3" class="test_label">选项卡3</label>
             <div class="test_tab_content">
                 <p>我是选项卡3的内容</p>
-                <img src="//image.zhangxinxu.com/image/study/s/s128/mm3.jpg" />
+                <img src="//image.zhangxinxu.com/image/study/s/s128/mm1.jpg" />
             </div>
         </div>
     </div>
@@ -204,6 +236,46 @@
     </div>
     <div class="list-item">
         <h2 class="demo_tit">3.checkbox设置感兴趣标签</h2>
+          <p class="label-info">请选择您的兴趣爱好:</p>
+        <div class="check_box tags-select">
+
+            <label class="tag-select">
+              <input type="checkbox" name="bye-version" value="1">
+              <span class="name">官方标配</span>  
+            </label>
+            <label class="tag-select">
+              <input type="checkbox" name="bye-version" value="2" checked>
+              <span class="name">移动优惠购</span>  
+            </label>
+            <label class="tag-select">
+              <input type="checkbox" name="bye-version" value="3" >
+              <span class="name">联通优惠购</span>  
+            </label>
+        </div>
+        
+         <p class="label-info">请选择您的购买方式:</p>
+        <div class="radio_box">
+            <div class="col-md-10">
+              <div class="tags-select">
+                <label class="tag-select">
+                  <input type="radio" name="bye-type" value="1">
+                  <span class="name">官方标配</span>  
+                </label>
+                <label class="tag-select">
+                  <input type="radio" name="bye-type" value="2">
+                  <span class="name">移动优惠购</span>  
+                </label>  
+                <label class="tag-select">
+                  <input type="radio" name="bye-type" value="3">
+                  <span class="name">联通优惠购</span>  
+                </label>  
+                <label class="tag-select">
+                  <input type="radio" name="bye-type" value="4">
+                  <span class="name">电信优惠购</span>  
+                </label>  
+      </div>  
+    </div>
+        </div>
 
     </div>
 </body>
